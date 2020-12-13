@@ -1,16 +1,15 @@
 
-import React, { Component } from "react";
-import { SortableContainer, SortableElement} from "react-sortable-hoc";
+import React from "react";
+import { SortableContainer} from "react-sortable-hoc";
 import arrayMove from "array-move";
-import {ItemChip, SortableItemChip, ItemChipProps} from "../listchips/ItemChip/ItemChip"
+import { SortableItemChip, ItemChipProps} from "../listchips/ItemChip/ItemChip"
 import "./SortableChipList.css"
 
-const SortableChipListContainer = SortableContainer(({items} : {items : any}) => {
-  console.log(items)
+const SortableChipListContainer = SortableContainer(({items} : {items : ItemChipProps[]}) => {
   return (
     <div className="sortable-list-container">
         {
-          items.map((item : any, index : number) => {
+          items.map((item : ItemChipProps, index : number) => {
             return (
               <SortableItemChip
                 key={"item-" + index}
@@ -37,9 +36,12 @@ export default class SortableChipList extends React.Component<SortableChipListSt
 
     constructor(props : SortableChipListState) {
       super(props)
-      this.state = props;
+
+      this.state = {
+        items: props.items
+      }
     }
-    onSortEnd = ({oldIndex, newIndex}: {oldIndex: number, newIndex: number}) => {
+    onSortEnd = ({oldIndex, newIndex}: {oldIndex: number, newIndex: number}, e : any) => {
       this.setState((state : SortableChipListState) => ({
         items: arrayMove(this.state.items, oldIndex, newIndex),
       }));
@@ -52,7 +54,9 @@ export default class SortableChipList extends React.Component<SortableChipListSt
           onSortEnd={this.onSortEnd}
           axis="x"
           lockAxis="x"
+          distance={1}
           helperClass="item-dragging"
+        
         />
       );
     }

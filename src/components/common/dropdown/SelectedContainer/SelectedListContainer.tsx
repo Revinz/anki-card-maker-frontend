@@ -12,7 +12,7 @@ export default class SelectedListContainer extends Component<SelectedListContain
 
     render() {
         return (
-            <div className="selected-list-container">
+            <div className="selected-list-container" onClick={() => console.log("ClickedContainer")}>
                 <SortableChipList items={this.props.items}/>
             </div>
         )

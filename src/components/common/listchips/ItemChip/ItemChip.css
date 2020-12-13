@@ -1,14 +1,32 @@
-.item-chip {
-  background-color: blue;
-  width: 50px;
-  float: left;
-  margin: 10px;
-  list-style: none;
-  cursor: grab;
+body #value {
+  margin-right: 20px;
 }
 
-body > .item-chip {
-  background-color: red;
-  cursor: grabbing;
-  pointer-events: unset !important;
+body #deleteBn {
+  float: right;
+}
+
+body #deleteIcon {
+  width: 12px;
+  height: 12px;
+  margin-right: -10px;
+  margin-top: 6px;
+}
+
+body .item-chip {
+  background-color: #2874d8;
+  cursor: default;
+
+  float: left;
+  max-width: 150px !important;
+  margin: 5px !important;
+  padding: 0px 20px 2px 10px !important;
+  list-style: none !important;
+  border-radius: 20px !important;
+  font-size: 16px !important;
+  justify-content: center !important;
+  text-align: center !important;
+  color: white;
+  width: auto !important;
+  box-shadow: 0px 1px 10px #4a8add;
 }

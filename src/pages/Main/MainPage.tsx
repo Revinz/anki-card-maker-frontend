@@ -6,7 +6,7 @@ export default class MainPage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Dropdown items={["Test1", "Test2"]}></Dropdown>
+                <Dropdown items={["Option1", "Option2"]}></Dropdown>
             </React.Fragment>
         )
     }

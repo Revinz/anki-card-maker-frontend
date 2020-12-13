@@ -13,19 +13,11 @@ type DropdownProps = {
 export default class Dropdown extends React.Component<DropdownProps> {
     constructor(props : DropdownProps) {
         super(props)
-
-
     
         this.state = {
-            selected: undefined,
-            disabled: false,
+            selectedItem: [],
         }
     }   
-
-    disable() {
-        console.log("Disabled")
-        this.setState({disabled: true})
-    }
 
     render() {
         return(
