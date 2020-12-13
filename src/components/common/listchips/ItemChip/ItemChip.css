@@ -1,0 +1,14 @@
+.item-chip {
+  background-color: blue;
+  width: 50px;
+  float: left;
+  margin: 10px;
+  list-style: none;
+  cursor: grab;
+}
+
+body > .item-chip {
+  background-color: red;
+  cursor: grabbing;
+  pointer-events: unset !important;
+}
