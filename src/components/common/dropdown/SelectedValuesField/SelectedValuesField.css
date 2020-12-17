@@ -1,0 +1,18 @@
+.selected-values-field {
+  width: 500px;
+  height: auto;
+  background-color: antiquewhite;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+
+#templateText {
+  font-size: 16px;
+  color: grey;
+  float: left;
+  display: flex;
+  margin-left: 10px;
+}

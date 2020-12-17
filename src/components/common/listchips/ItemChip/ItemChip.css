@@ -13,12 +13,11 @@ body #deleteIcon {
   margin-top: 6px;
 }
 
-body .item-chip {
+.item-chip {
   background-color: #2874d8;
   cursor: default;
 
   float: left;
-  max-width: 150px !important;
   margin: 5px !important;
   padding: 0px 20px 2px 10px !important;
   list-style: none !important;
@@ -30,3 +29,31 @@ body .item-chip {
   width: auto !important;
   box-shadow: 0px 1px 10px #4a8add;
 }
+
+body > .item-chip {
+  background-color: red;
+  cursor: default;
+
+  float: left;
+  margin: 5px !important;
+  padding: 0px 20px 2px 10px !important;
+  list-style: none !important;
+  border-radius: 20px !important;
+  font-size: 16px !important;
+  justify-content: center !important;
+  text-align: center !important;
+  color: white;
+  width: auto !important;
+  box-shadow: 0px 1px 10px #4a8add;
+}
+
+body .item-chip:focus {
+  color: magenta;
+}
+
+/*Removs the focus outline */
+/*
+body .item-chip:focus {
+  outline-style: none;
+}
+*/

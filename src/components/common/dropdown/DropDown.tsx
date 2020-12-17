@@ -1,27 +1,38 @@
 import React from "react";
-import SelectedListContainer from "./SelectedContainer/SelectedListContainer";
+import { SelectedValuesField } from "./SelectedValuesField/SelectedValuesField";
 
 type DropdownProps = {
     title?: string,
     items: string[],
     height?: Number,
     width?: Number,
-    templateText?: string,
+    disabled?: boolean,
+    templateText?: String;
+}
+
+type DropdownState = {
+    selectedItems : string[]
     disabled?: boolean
 }
 
-export default class Dropdown extends React.Component<DropdownProps> {
+export default class Dropdown extends React.Component<DropdownProps, DropdownState > {
     constructor(props : DropdownProps) {
         super(props)
     
         this.state = {
-            selectedItem: [],
+            selectedItems: ["Test", "Test2"],
         }
     }   
 
     render() {
-        return(
-            <SelectedListContainer items={[{value: "Test"}, {value: "Test2"}]}/>
+        return (
+            <div>
+                <SelectedValuesField templateText = { this.props.templateText ? this.props.templateText : "No options have been selected."}
+                 items={ this.state.selectedItems.map(item => {
+                    return {value: item}
+                    })
+                }/>
+            </div>
             )
     }
     
