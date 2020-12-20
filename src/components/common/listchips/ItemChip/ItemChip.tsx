@@ -1,29 +1,27 @@
-import { useState } from "react";
 import { SortableElement } from "react-sortable-hoc";
 import "./ItemChip.css";
 import { ReactComponent as DeleteIcon } from "./delete.svg";
+import { SelectableItemProps } from "../../dropdown/SelectableItem/SelectableItem";
 
 export interface ItemChipProps {
-  value: String | Number;
-  onDelete?: Function;
+  item: SelectableItemProps;
+  onItemDeselect: (itemToDelete: SelectableItemProps) => void;
   optional?: any;
 }
 
 export const ItemChip = (props: ItemChipProps) => {
-  const Delete = (e: React.MouseEvent) => {
-    console.log("clickedDeleted");
+  const Deselect = (e: React.MouseEvent) => {
     e.stopPropagation();
-
-    if (props.onDelete) props.onDelete();
+    if (props.onItemDeselect) props.onItemDeselect(props.item);
   };
 
   return (
-    <li data-testid="item-chip" className="item-chip" tabIndex={0}>
+    <li className="item-chip" tabIndex={0}>
       <div>
-        <span id={"value"}>{props.value}</span>
-        <span id={"deleteBn"} onClick={(e) => Delete(e)}>
+        <span id={"value"}>{props.item.value}</span>
+        <button id={"deleteBn"} onClick={(e) => Deselect(e)}>
           <DeleteIcon id={"deleteIcon"} />
-        </span>
+        </button>
       </div>
     </li>
   );

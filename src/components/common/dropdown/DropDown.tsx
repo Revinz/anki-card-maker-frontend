@@ -1,39 +1,77 @@
 import React from "react";
+import { SelectableItemProps } from "./SelectableItem/SelectableItem";
 import { SelectedValuesField } from "./SelectedValuesField/SelectedValuesField";
+import { CheckboxMenu } from "./SelectionMenu/CheckboxMenu";
+import "./DropDown.css";
+import { title } from "process";
 
 type DropdownProps = {
-    title?: string,
-    items: string[],
-    height?: Number,
-    width?: Number,
-    disabled?: boolean,
-    templateText?: String;
-}
+  items: SelectableItemProps[];
+  title?: string;
+  templateText?: String;
+};
 
 type DropdownState = {
-    selectedItems : string[]
-    disabled?: boolean
-}
+  selectedItems: SelectableItemProps[];
+  opened: boolean;
+};
 
-export default class Dropdown extends React.Component<DropdownProps, DropdownState > {
-    constructor(props : DropdownProps) {
-        super(props)
-    
-        this.state = {
-            selectedItems: ["Test", "Test2"],
-        }
-    }   
+export default class Dropdown extends React.Component<
+  DropdownProps,
+  DropdownState
+> {
+  constructor(props: DropdownProps) {
+    super(props);
+    this.state = {
+      selectedItems: this.getSelectedItems(props.items),
+      opened: false,
+    };
+  }
 
-    render() {
-        return (
-            <div>
-                <SelectedValuesField templateText = { this.props.templateText ? this.props.templateText : "No options have been selected."}
-                 items={ this.state.selectedItems.map(item => {
-                    return {value: item}
-                    })
-                }/>
-            </div>
-            )
-    }
-    
+  openMenu(e: MouseEvent) {
+    this.setState({ opened: !this.state.opened });
+  }
+
+  private getSelectedItems(
+    items: SelectableItemProps[]
+  ): SelectableItemProps[] {
+    const selectedItems = this.props.items.filter((i) => {
+      return i.isSelected;
+    });
+    return selectedItems;
+  }
+
+  updateItems(items: SelectableItemProps[]) {
+    this.setState({
+      selectedItems: this.getSelectedItems(items),
+    });
+  }
+
+  render() {
+    return (
+      <div className="dropdown">
+        <label className="dropdown-label">{this.props.title}</label>
+        <div className="dropdown-selected-box">
+          <SelectedValuesField
+            onClick={this.openMenu.bind(this)}
+            onSelectChange={this.updateItems.bind(this)}
+            templateText={
+              this.props.templateText
+                ? this.props.templateText
+                : "No options have been selected."
+            }
+            items={this.state.selectedItems}
+          />
+        </div>
+        <div
+          className={"dropdown-menu " + (this.state.opened ? "visible" : "")}
+        >
+          <CheckboxMenu
+            items={this.props.items}
+            onSelectionChange={this.updateItems.bind(this)}
+          />
+        </div>
+      </div>
+    );
+  }
 }

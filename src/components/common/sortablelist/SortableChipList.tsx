@@ -1,19 +1,47 @@
-import React, { useState } from "react";
+import React, { SyntheticEvent, useState } from "react";
 import { SortableContainer, SortEnd, SortEvent } from "react-sortable-hoc";
-import arrayMove from "array-move";
-import {
-  SortableItemChip,
-  ItemChipProps,
-} from "../listchips/ItemChip/ItemChip";
+import { SortableItemChip } from "../listchips/ItemChip/ItemChip";
 import "./SortableChipList.css";
+import { SelectableItemProps } from "../dropdown/SelectableItem/SelectableItem";
 
 const SortableChipListContainer = SortableContainer(
-  ({ items }: { items: ItemChipProps[] }) => {
+  ({
+    items,
+    onItemDeselect,
+  }: {
+    items: SelectableItemProps[];
+    onItemDeselect: (item: SelectableItemProps) => void;
+  }) => {
+    // To prevent the dropdown menu opening after dragging an item
+    const [dragging, updateDragging] = useState(true);
+    const stopBubblingOnDrag = (e: SyntheticEvent) => {
+      if (dragging) {
+        e.stopPropagation();
+        e.preventDefault();
+        updateDragging(false);
+      }
+    };
+
     return (
-      <div className="sortable-list-container">
-        {items.map((item: ItemChipProps, index: number) => {
+      <div
+        className="sortable-list-container"
+        onMouseDown={() => {
+          updateDragging(false);
+        }}
+        onMouseMove={() => {
+          updateDragging(true);
+        }}
+        onClick={(e) => stopBubblingOnDrag(e)}
+      >
+        {items.map((item: SelectableItemProps, index: number) => {
           return (
-            <SortableItemChip key={"item-" + index} index={index} {...item} />
+            <SortableItemChip
+              item={item}
+              key={"item-" + index}
+              index={index}
+              onItemDeselect={(item) => onItemDeselect(item)}
+              {...item}
+            />
           );
         })}
       </div>
@@ -22,20 +50,19 @@ const SortableChipListContainer = SortableContainer(
 );
 
 interface SortableChipListProps {
-  items: ItemChipProps[];
+  items: SelectableItemProps[];
   onItemsSorted: (sort: SortEnd, event: SortEvent) => void;
+  onItemDeselect?: (item: SelectableItemProps) => void;
   templateText?: String;
 }
-/**
- *
- * A horizontal sortable chip list.
- *
- */
 
 export const SortableChipList = (props: SortableChipListProps) => {
   return (
     <SortableChipListContainer
       items={props.items}
+      onItemDeselect={(item) =>
+        props.onItemDeselect ? props.onItemDeselect(item) : null
+      }
       onSortEnd={props.onItemsSorted}
       axis="xy"
       distance={1}

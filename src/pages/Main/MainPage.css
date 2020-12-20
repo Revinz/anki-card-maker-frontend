@@ -1,0 +1,8 @@
+.test-side-label {
+  display: flex;
+  align-items: center;
+}
+
+.test-side-label label {
+  margin-right: 25px;
+}

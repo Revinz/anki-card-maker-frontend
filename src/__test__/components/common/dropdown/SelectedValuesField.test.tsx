@@ -1,9 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { render, cleanup } from "@testing-library/react";
-import ReactTestUtils from "react-dom/test-utils";
+import { render, cleanup, screen } from "@testing-library/react";
 import { SelectedValuesField } from "../../../../components/common/dropdown/SelectedValuesField/SelectedValuesField";
-jest.setTimeout(5000);
 afterEach(cleanup);
 
 describe("Renders", () => {
@@ -30,9 +27,5 @@ describe("Renders", () => {
     });
   });
 
-  describe("Interactions", () => {
-    xit("Should open the selection menu when clicked", (done) => {
-      throw new Error("Not implemented.");
-    });
-  });
+  describe("Interactions", () => {});
 });

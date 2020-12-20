@@ -1,0 +1,45 @@
+.dropdown {
+  width: 530px;
+  position: relative;
+}
+
+.dropdown-menu {
+  background-color: antiquewhite;
+
+  margin-top: -35px;
+  z-index: 1;
+  position: absolute;
+  display: none;
+  float: left;
+  width: 100%;
+  padding-top: 35px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.visible {
+  display: block !important;
+}
+
+.dropdown-selected-box {
+  z-index: 2;
+  position: relative;
+}
+
+.selected-values-field {
+  width: 100%;
+  height: auto;
+  background-color: antiquewhite;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dropdown-label {
+  color: white;
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}

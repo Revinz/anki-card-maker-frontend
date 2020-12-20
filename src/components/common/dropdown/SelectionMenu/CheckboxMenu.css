@@ -1,0 +1,27 @@
+.dropdown-checkbox-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  padding-left: 65px;
+}
+.checkbox-item {
+  float: left;
+  position: relative;
+  display: flex;
+  flex: 30%;
+  margin: 10px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+}
+
+.checkbox-label {
+  color: black;
+  margin-top: 2px;
+  font-size: 16px;
+  display: block;
+}
