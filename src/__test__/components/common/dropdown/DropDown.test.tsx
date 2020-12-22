@@ -13,7 +13,7 @@ afterEach(cleanup);
 
 describe("Drop Down", () => {
   describe("Rendering", () => {
-    xit("Starts with no selected items should render no items in the selected box", () => {
+    it("SonarCloud Error Test", () => {
       const wrapper: any = TestUtils.renderIntoDocument(
         <Dropdown title={"TestTitle"} items={[]} />
       );
