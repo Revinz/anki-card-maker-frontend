@@ -22,7 +22,7 @@ jobs:
       uses: Adzz/yarn_command_action@v1.0.0
       with:
         # Specify whether to use npm or yarn to run the tests. May be npm or yarn only defaults to yarn
-        package-manager: yarn
+        package-manager: npm
         # The command you wish to run e.g. test
         command: test-coverage
     - name: SonarCloud Scan
