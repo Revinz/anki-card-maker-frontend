@@ -3,7 +3,6 @@ import { SelectableItemProps } from "./SelectableItem/SelectableItem";
 import { SelectedValuesField } from "./SelectedValuesField/SelectedValuesField";
 import { CheckboxMenu } from "./SelectionMenu/CheckboxMenu";
 import "./DropDown.css";
-import { title } from "process";
 
 type DropdownProps = {
   items: SelectableItemProps[];
