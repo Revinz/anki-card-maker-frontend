@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <unitTest version="1">
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\CheckboxMenu.test.tsx">
-        <testCase name="CheckBoxMenu Rendering Renders items" duration="137"/>
+        <testCase name="CheckBoxMenu Rendering Renders items" duration="92"/>
     </file>
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\ItemChip.test.tsx">
-        <testCase name="Item Chip Rendering Should render item-chip with value" duration="66"/>
+        <testCase name="Item Chip Rendering Should render item-chip with value" duration="87"/>
     </file>
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\SelectedValuesField.test.tsx">
-        <testCase name="Renders Selected items Should render 1 selected item" duration="86"/>
-        <testCase name="Renders Selected items Should render template text when no items have been selected" duration="9"/>
+        <testCase name="Renders Selected items Should render 1 selected item" duration="142"/>
+        <testCase name="Renders Selected items Should render template text when no items have been selected" duration="10"/>
     </file>
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\DropDown.test.tsx">
-        <testCase name="Drop Down Rendering Starts with no selected items should render no items in the selected box" duration="0"/>
-        <testCase name="Drop Down Rendering Starts with no selected items should render no items in the selected box" duration="40"/>
-        <testCase name="Drop Down Rendering Starts with selected items should render selected items in the selected box" duration="45"/>
-        <testCase name="Drop Down Interactions Clicking Selected values box opens dropdown menu" duration="30"/>
+        <testCase name="Drop Down Rendering SonarCloud Error Test" duration="34">
+            <failure message="Error: Not implemented."><![CDATA[Error: Not implemented.
+    at Object.<anonymous> (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\DropDown.test.tsx:21:13)
+    at Promise.then.completed (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\utils.js:276:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\utils.js:216:10)
+    at _callCircusTest (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\run.js:212:40)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at _runTest (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\run.js:149:3)
+    at _runTestsForDescribeBlock (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\run.js:63:9)
+    at _runTestsForDescribeBlock (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\run.js:57:9)
+    at _runTestsForDescribeBlock (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\run.js:57:9)
+    at run (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\run.js:25:3)
+    at runAndTransformResultsToJestFormat (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:176:21)
+    at jestAdapter (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:109:19)
+    at runTestInternal (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-runner\build\runTest.js:380:16)
+    at runTest (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-runner\build\runTest.js:472:34)
+    at Object.worker (C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\node_modules\jest-runner\build\testWorker.js:133:12)]]></failure>
+        </testCase>
+        <testCase name="Drop Down Rendering Starts with no selected items should render no items in the selected box" duration="10"/>
+        <testCase name="Drop Down Rendering Starts with selected items should render selected items in the selected box" duration="33"/>
+        <testCase name="Drop Down Interactions Clicking Selected values box opens dropdown menu" duration="25"/>
     </file>
 </unitTest>
