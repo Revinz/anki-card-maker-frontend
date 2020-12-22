@@ -7,7 +7,7 @@ on:
       - '**'
   pull_request:
       types: [opened, synchronize, reopened]
-name: Main Workflow
+name: SonarCloud
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
@@ -16,10 +16,11 @@ jobs:
       with:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
-    - name: Run a yarn or npm command
+    - name: Generate Test Coverage
       # You may pin to the exact commit or the version.
       # uses: Adzz/yarn_command_action@56ed36b86d715869a3cf3d2a9b2de2aff7fa945e
       uses: Adzz/yarn_command_action@v1.0.0
+      continue-on-error: true # Allows tests to fail and still generate the coverage
       with:
         # Specify whether to use npm or yarn to run the tests. May be npm or yarn only defaults to yarn
         package-manager: yarn
