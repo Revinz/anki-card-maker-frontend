@@ -24,7 +24,7 @@ jobs:
         # Specify whether to use npm or yarn to run the tests. May be npm or yarn only defaults to yarn
         package-manager: npm
         # The command you wish to run e.g. test
-        command: npm run test-coverage
+        command: test-coverage
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       env:
