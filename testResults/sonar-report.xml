@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <unitTest version="1">
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\CheckboxMenu.test.tsx">
-        <testCase name="CheckBoxMenu Rendering Renders items" duration="90"/>
+        <testCase name="CheckBoxMenu Rendering Renders items" duration="137"/>
     </file>
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\ItemChip.test.tsx">
-        <testCase name="Item Chip Rendering Should render item-chip with value" duration="63"/>
+        <testCase name="Item Chip Rendering Should render item-chip with value" duration="66"/>
     </file>
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\SelectedValuesField.test.tsx">
-        <testCase name="Renders Selected items Should render 1 selected item" duration="72"/>
-        <testCase name="Renders Selected items Should render template text when no items have been selected" duration="7"/>
+        <testCase name="Renders Selected items Should render 1 selected item" duration="86"/>
+        <testCase name="Renders Selected items Should render template text when no items have been selected" duration="9"/>
     </file>
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\DropDown.test.tsx">
         <testCase name="Drop Down Rendering Starts with no selected items should render no items in the selected box" duration="0"/>
-        <testCase name="Drop Down Rendering Starts with no selected items should render no items in the selected box" duration="36"/>
-        <testCase name="Drop Down Rendering Starts with selected items should render selected items in the selected box" duration="50"/>
-        <testCase name="Drop Down Interactions Clicking Selected values box opens dropdown menu" duration="22"/>
+        <testCase name="Drop Down Rendering Starts with no selected items should render no items in the selected box" duration="40"/>
+        <testCase name="Drop Down Rendering Starts with selected items should render selected items in the selected box" duration="45"/>
+        <testCase name="Drop Down Interactions Clicking Selected values box opens dropdown menu" duration="30"/>
     </file>
 </unitTest>
