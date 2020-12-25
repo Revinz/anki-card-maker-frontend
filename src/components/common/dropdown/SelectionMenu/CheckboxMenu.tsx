@@ -9,6 +9,13 @@ type SelectionMenuProps = {
 
 type CheckboxMenuProps = SelectionMenuProps & {};
 
+/**
+ * A dropdown menu that uses checkboxes for the selectable items.
+ *
+ *
+ * @param props.items the items for the menu
+ * @param props.onSelectionChange Callback function that takes in the updated list of items
+ */
 export const CheckboxMenu = (props: CheckboxMenuProps) => {
   const Toggle = (e: ChangeEvent<HTMLInputElement>) => {
     props.items.forEach((item) => {
