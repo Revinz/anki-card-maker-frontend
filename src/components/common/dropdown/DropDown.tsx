@@ -8,6 +8,7 @@ type DropdownProps = {
   items: SelectableItemProps[];
   title?: string;
   templateText?: String;
+  startOpened?: boolean;
 };
 
 type DropdownState = {
@@ -23,7 +24,7 @@ export default class Dropdown extends React.Component<
     super(props);
     this.state = {
       selectedItems: this.getSelectedItems(props.items),
-      opened: false,
+      opened: props.startOpened || false,
     };
   }
 

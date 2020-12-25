@@ -21,7 +21,7 @@ export const CheckboxMenu = (props: CheckboxMenuProps) => {
   };
 
   return (
-    <div className="dropdown-checkbox-menu">
+    <div data-testid="dropdown-menu" className="dropdown-checkbox-menu">
       {props.items.map((i, index) => {
         return (
           <div className="checkbox-item" key={"item-" + index}>

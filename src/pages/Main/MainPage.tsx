@@ -33,6 +33,7 @@ const selectableItems: SelectableItemProps[] = [
     value: "Custom Image (URL)",
     isSelected: false,
   },
+  { value: "testOption1", isSelected: true },
 ];
 
 export default class MainPage extends React.Component {

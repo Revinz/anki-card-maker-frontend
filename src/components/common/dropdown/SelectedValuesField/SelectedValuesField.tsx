@@ -49,6 +49,7 @@ export const SelectedValuesField = (props: SelectedValuesFieldProps) => {
 
   return (
     <div
+      data-testid="selected-values-field"
       className="selected-values-field"
       onClick={(e) => {
         if (props.onClick) props.onClick(e);
