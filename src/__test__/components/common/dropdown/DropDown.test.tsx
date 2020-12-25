@@ -28,6 +28,12 @@ describe("Drop Down", () => {
       expect(selectedItems.length).toBe(1);
     });
 
+    it("Title is rendered when specified", async () => {
+      const wrapper = render(<Dropdown title="TestTitle" items={[]} />);
+      const title = await wrapper.findByText("TestTitle");
+      expect(title).toHaveTextContent("TestTitle");
+    });
+
     it("Placeholder text defaults to 'No options have been selected.' when not specified", async () => {
       const wrapper: any = render(<Dropdown items={[]} />);
       const expectedText = "No options have been selected.";

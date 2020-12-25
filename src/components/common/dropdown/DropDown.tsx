@@ -50,7 +50,9 @@ export default class Dropdown extends React.Component<
   render() {
     return (
       <div className="dropdown">
-        <label className="dropdown-label">{this.props.title}</label>
+        {this.props.title ? (
+          <label className="dropdown-label">{this.props.title}</label>
+        ) : null}
         <div className="dropdown-selected-box">
           <SelectedValuesField
             onClick={this.openMenu.bind(this)}
