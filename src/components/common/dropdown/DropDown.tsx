@@ -3,12 +3,12 @@ import { SelectableItemProps } from "./SelectableItem/SelectableItem";
 import { SelectedValuesField } from "./SelectedValuesField/SelectedValuesField";
 import { CheckboxMenu } from "./SelectionMenu/CheckboxMenu";
 import "./DropDown.css";
-import { title } from "process";
 
 type DropdownProps = {
   items: SelectableItemProps[];
   title?: string;
   templateText?: String;
+  startOpened?: boolean;
 };
 
 type DropdownState = {
@@ -24,7 +24,7 @@ export default class Dropdown extends React.Component<
     super(props);
     this.state = {
       selectedItems: this.getSelectedItems(props.items),
-      opened: false,
+      opened: props.startOpened || false,
     };
   }
 
@@ -50,7 +50,9 @@ export default class Dropdown extends React.Component<
   render() {
     return (
       <div className="dropdown">
-        <label className="dropdown-label">{this.props.title}</label>
+        {this.props.title ? (
+          <label className="dropdown-label">{this.props.title}</label>
+        ) : null}
         <div className="dropdown-selected-box">
           <SelectedValuesField
             onClick={this.openMenu.bind(this)}

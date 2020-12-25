@@ -16,10 +16,14 @@ export const ItemChip = (props: ItemChipProps) => {
   };
 
   return (
-    <li className="item-chip" tabIndex={0}>
+    <li data-testid="selected-item-chip" className="item-chip" tabIndex={0}>
       <div>
         <span id={"value"}>{props.item.value}</span>
-        <button id={"deleteBn"} onClick={(e) => Deselect(e)}>
+        <button
+          data-testid="selected-item-chip-deselect-bn"
+          id={"deleteBn"}
+          onClick={(e) => Deselect(e)}
+        >
           <DeleteIcon id={"deleteIcon"} />
         </button>
       </div>

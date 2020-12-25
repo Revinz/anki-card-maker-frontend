@@ -1,4 +1,4 @@
-import React, { ChangeEvent, SyntheticEvent } from "react";
+import React, { ChangeEvent } from "react";
 import { SelectableItemProps } from "../SelectableItem/SelectableItem";
 import "./CheckboxMenu.css";
 
@@ -9,6 +9,13 @@ type SelectionMenuProps = {
 
 type CheckboxMenuProps = SelectionMenuProps & {};
 
+/**
+ * A dropdown menu that uses checkboxes for the selectable items.
+ *
+ *
+ * @param props.items the items for the menu
+ * @param props.onSelectionChange Callback function that takes in the updated list of items
+ */
 export const CheckboxMenu = (props: CheckboxMenuProps) => {
   const Toggle = (e: ChangeEvent<HTMLInputElement>) => {
     props.items.forEach((item) => {
@@ -21,7 +28,7 @@ export const CheckboxMenu = (props: CheckboxMenuProps) => {
   };
 
   return (
-    <div className="dropdown-checkbox-menu">
+    <div data-testid="dropdown-menu" className="dropdown-checkbox-menu">
       {props.items.map((i, index) => {
         return (
           <div className="checkbox-item" key={"item-" + index}>
