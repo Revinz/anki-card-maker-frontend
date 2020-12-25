@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <unitTest version="1">
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\CheckboxMenu.test.tsx">
-        <testCase name="CheckBoxMenu Rendering Renders items" duration="85"/>
+        <testCase name="CheckBoxMenu Rendering Renders items" duration="126"/>
     </file>
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\ItemChip.test.tsx">
-        <testCase name="Item Chip Rendering Should render item-chip with value" duration="65"/>
-    </file>
-    <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\DropDown.test.tsx">
-        <testCase name="Drop Down Rendering Starts with no selected items should render no items in the selected box" duration="0"/>
-        <testCase name="Drop Down Rendering Starts with no selected items should render no items in the selected box" duration="51"/>
-        <testCase name="Drop Down Rendering Starts with selected items should render selected items in the selected box" duration="47"/>
-        <testCase name="Drop Down Interactions Clicking Selected values box opens dropdown menu" duration="26"/>
+        <testCase name="Item Chip Rendering Should render item-chip with value" duration="68"/>
     </file>
     <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\SelectedValuesField.test.tsx">
-        <testCase name="Renders Selected items Should render 1 selected item" duration="98"/>
-        <testCase name="Renders Selected items Should render template text when no items have been selected" duration="6"/>
+        <testCase name="Renders Selected items Should render 1 selected item" duration="135"/>
+        <testCase name="Renders Selected items Should render template text when no items have been selected" duration="12"/>
+    </file>
+    <file path="C:\Users\Revinz\Desktop\Development\AnkiCardMaker\anki-card-maker-frontend\src\__test__\components\common\dropdown\DropDown.test.tsx">
+        <testCase name="Drop Down Rendering Starts with no selected items should render no items in the selected box" duration="70"/>
+        <testCase name="Drop Down Rendering Starts with selected items should render selected items in the selected box" duration="87"/>
+        <testCase name="Drop Down Rendering Title is rendered when specified" duration="35"/>
+        <testCase name="Drop Down Rendering Placeholder text defaults to &apos;No options have been selected.&apos; when not specified" duration="15"/>
+        <testCase name="Drop Down Rendering Correct placeholder text is used when specified" duration="13"/>
+        <testCase name="Drop Down Interactions Clicking Selected values box opens dropdown menu" duration="46"/>
+        <testCase name="Drop Down Interactions Deselecting item from the selected values box removes it" duration="86"/>
+        <testCase name="Drop Down Interactions Deselecting item from the dropdown menu removes it from the selected values box" duration="148"/>
+        <testCase name="Drop Down Interactions Selecting item from the dropdown menu adds it to the selected values box" duration="60"/>
     </file>
 </unitTest>
