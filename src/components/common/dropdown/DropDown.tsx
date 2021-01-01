@@ -66,7 +66,9 @@ export default class Dropdown extends React.Component<
           />
         </div>
         <div
-          className={"dropdown-menu " + (this.state.opened ? "visible" : "")}
+          className={
+            "dropdown-menu " + (this.state.opened ? "visible" : "hidden")
+          }
         >
           <CheckboxMenu
             items={this.props.items}
