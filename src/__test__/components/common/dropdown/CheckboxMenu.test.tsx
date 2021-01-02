@@ -1,11 +1,5 @@
+import { cleanup, render } from "@testing-library/react";
 import React from "react";
-import TestUtils, {
-  findRenderedDOMComponentWithClass,
-  scryRenderedDOMComponentsWithClass,
-  Simulate,
-} from "react-dom/test-utils";
-import { render, cleanup } from "@testing-library/react";
-import Dropdown from "../../../../components/common/dropdown/DropDown";
 import { CheckboxMenu } from "../../../../components/common/dropdown/SelectionMenu/CheckboxMenu";
 afterEach(cleanup);
 

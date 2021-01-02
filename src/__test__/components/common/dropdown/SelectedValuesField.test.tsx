@@ -1,5 +1,5 @@
+import { cleanup, render } from "@testing-library/react";
 import React from "react";
-import { render, cleanup, screen } from "@testing-library/react";
 import { SelectedValuesField } from "../../../../components/common/dropdown/SelectedValuesField/SelectedValuesField";
 afterEach(cleanup);
 

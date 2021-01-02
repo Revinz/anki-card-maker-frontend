@@ -2,12 +2,12 @@
   border-radius: 30px;
   background-color: var(--highlight);
   padding: 20px;
-  width: 60%;
   text-align: left;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
-  width: 750px;
+  width: 40%;
+  min-width: 600px;
 }
 
 .section-content {

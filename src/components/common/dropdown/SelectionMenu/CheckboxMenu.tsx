@@ -7,7 +7,7 @@ type SelectionMenuProps = {
   onSelectionChange: (items: SelectableItemProps[]) => void;
 };
 
-type CheckboxMenuProps = SelectionMenuProps & {};
+type CheckboxMenuProps = SelectionMenuProps;
 
 /**
  * A dropdown menu that uses checkboxes for the selectable items.

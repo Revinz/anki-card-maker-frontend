@@ -1,9 +1,5 @@
+import { cleanup, render } from "@testing-library/react";
 import React from "react";
-import ReactDOM from "react-dom";
-import { render, cleanup, screen } from "@testing-library/react";
-import TestUtils, {
-  findRenderedDOMComponentWithClass,
-} from "react-dom/test-utils";
 import { ItemChip } from "../../../../components/common/listchips/ItemChip/ItemChip";
 afterEach(cleanup);
 
