@@ -49,33 +49,37 @@ export default class Dropdown extends React.Component<
 
   render() {
     return (
-      <div className="dropdown">
-        {this.props.title ? (
-          <label className="dropdown-label">{this.props.title}</label>
-        ) : null}
-        <div className="dropdown-selected-box">
-          <SelectedValuesField
-            onClick={this.openMenu.bind(this)}
-            onSelectChange={this.updateItems.bind(this)}
-            templateText={
-              this.props.templateText
-                ? this.props.templateText
-                : "No options have been selected."
-            }
-            items={this.state.selectedItems}
-          />
+      <>
+        <div className="dropdown-container">
+          {this.props.title ? (
+            <label className="dropdown-label">{this.props.title}</label>
+          ) : null}
+          <div className="dropdown">
+            <div className="dropdown-selected-box">
+              <SelectedValuesField
+                onClick={this.openMenu.bind(this)}
+                onSelectChange={this.updateItems.bind(this)}
+                templateText={
+                  this.props.templateText
+                    ? this.props.templateText
+                    : "No options have been selected."
+                }
+                items={this.state.selectedItems}
+              />
+            </div>
+            <div
+              className={
+                "dropdown-menu " + (this.state.opened ? "visible" : "hidden")
+              }
+            >
+              <CheckboxMenu
+                items={this.props.items}
+                onSelectionChange={this.updateItems.bind(this)}
+              />
+            </div>
+          </div>
         </div>
-        <div
-          className={
-            "dropdown-menu " + (this.state.opened ? "visible" : "hidden")
-          }
-        >
-          <CheckboxMenu
-            items={this.props.items}
-            onSelectionChange={this.updateItems.bind(this)}
-          />
-        </div>
-      </div>
+      </>
     );
   }
 }

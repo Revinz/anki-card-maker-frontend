@@ -53,10 +53,22 @@ export default class MainPage extends React.Component {
           title="Select the desired elements for each card field."
           description="Fields can be made blank by not selecting anything."
         >
-          <Dropdown items={cloneDeep(selectableItems)}></Dropdown>
-          <Dropdown items={cloneDeep(selectableItems)}></Dropdown>
-          <Dropdown items={cloneDeep(selectableItems)}></Dropdown>
-          <Dropdown items={cloneDeep(selectableItems)}></Dropdown>
+          <Dropdown
+            title="Field 1"
+            items={cloneDeep(selectableItems)}
+          ></Dropdown>
+          <Dropdown
+            title="Long Ass Field Name"
+            items={cloneDeep(selectableItems)}
+          ></Dropdown>
+          <Dropdown
+            title="Field 3"
+            items={cloneDeep(selectableItems)}
+          ></Dropdown>
+          <Dropdown
+            title="Long Ass Field Name"
+            items={cloneDeep(selectableItems)}
+          ></Dropdown>
         </Section>
         <Section title="Words">
           <input type="text" placeholder="Enter english word"></input>
