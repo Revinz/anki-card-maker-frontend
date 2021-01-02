@@ -26,6 +26,7 @@
   margin-top: -35px;
   opacity: 0;
   transition: all 0.1s ease-in-out;
+  visibility: hidden;
   box-shadow: none;
 }
 
@@ -33,6 +34,7 @@
   margin-top: 5px;
   z-index: 999; /*Overlay on top of everything when visible */
   opacity: 1;
+  visibility: visible;
   transition: all 0.1s ease-in-out;
   box-shadow: 0px 8px 16px var(--dark-highlight);
 }
